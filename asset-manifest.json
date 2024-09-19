@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ibrahimportfolio/static/css/main.f855e6bc.css",
-    "main.js": "/ibrahimportfolio/static/js/main.2cb2f162.js",
+    "main.css": "/ibrahimportfolio/static/css/main.e6c13ad2.css",
+    "main.js": "/ibrahimportfolio/static/js/main.40876d67.js",
     "static/js/453.ab91c354.chunk.js": "/ibrahimportfolio/static/js/453.ab91c354.chunk.js",
-    "static/media/logo.svg": "/ibrahimportfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo.png": "/ibrahimportfolio/static/media/logo.95d1d1f15c9290610f5d.png",
     "index.html": "/ibrahimportfolio/index.html",
-    "main.f855e6bc.css.map": "/ibrahimportfolio/static/css/main.f855e6bc.css.map",
-    "main.2cb2f162.js.map": "/ibrahimportfolio/static/js/main.2cb2f162.js.map",
+    "main.e6c13ad2.css.map": "/ibrahimportfolio/static/css/main.e6c13ad2.css.map",
+    "main.40876d67.js.map": "/ibrahimportfolio/static/js/main.40876d67.js.map",
     "453.ab91c354.chunk.js.map": "/ibrahimportfolio/static/js/453.ab91c354.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.2cb2f162.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.40876d67.js"
   ]
 }
