@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import logo from '../assets/img/logo.png';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 const navItems = ['Home', 'About', 'Contact'];
 
 function DrawerAppBar(props) {
@@ -30,7 +30,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src={logo} style={{ width:150}} alt="logo" />
+        <img src={logo} style={{ width: 150 }} alt="logo" />
       </Typography>
       <Divider />
       <List>
@@ -48,9 +48,9 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', bgcolor:'red',height:50}}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ bgcolor: '#7fa0c3' }}>
+      <AppBar component="nav" sx={{ bgcolor: '#6382ad'}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -64,9 +64,9 @@ function DrawerAppBar(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, mt:1 }}
+            sx={{ flexGrow: 1, mt: 1}} 
           >
-            <img src={logo} style={{ width:90 }} alt="logo" />
+            <img src={logo} style={{ width: 90 }} alt="logo" />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
             {navItems.map((item) => (
@@ -89,6 +89,7 @@ function DrawerAppBar(props) {
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            bgcolor:'red'
           }}
         >
           {drawer}
