@@ -13,42 +13,44 @@ function HeroSection() {
 
   return (
     <div>
-      <Box style={{
-        backgroundColor: '#6382ad',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        marginBottom: '-30px',
-        marginLeft: '-20px'
-      }}>
+      <Box
+        sx={{
+          backgroundColor: '#6382ad',
+          display: 'flex',
+          flexDirection: { xs: 'row', md: 'row' },
+          alignItems: 'center',
+          // marginBottom: '-30px',
+          marginLeft: '-40px',
+        }}
+      >
         <Box
           component="img"
           src={img}
           sx={{ width: { xs: 250, md: 590 } }}
           alt="personal img"
         />
-        <Box>
+        <Box sx={{ marginLeft: { xs: 0, md: 2 } }}>
           <Box
             component="img"
             src={engname}
-            sx={{ width: { xs: 170, md: 500 }, marginTop: 3, marginLeft: '-30px' }}
+            sx={{ width: { xs: 170, md: 500 }, marginTop: 3 }}
             alt="name in English"
           />
           <Box
             sx={{
               display: 'flex',
-              justifyContent: {xs:'space-evenly',md:'start'},
-              marginLeft: { xs: '-40px',md:2  },
-              // bgcolor:"red"
+              justifyContent: { xs: 'space-evenly', md: 'flex-start' },
+              marginTop: 2,
             }}
           >
             <a href="https://www.instagram.com/_.ebo/">
-              <InstagramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: {md:2} }} />
+              <InstagramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: { md: 2 } }} />
             </a>
             <a href="https://t.me/hema_81" target="_blank" rel="noopener noreferrer">
-              <TelegramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: {md:17} }} />
+              <TelegramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: { md: 17 } }} />
             </a>
             <a href="https://api.whatsapp.com/send?phone=9647733599572&text=Hello">
-              <WhatsAppIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 } , marginLeft: {md:17}}} />
+              <WhatsAppIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: { md: 17 } }} />
             </a>
           </Box>
         </Box>
