@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import logo from '../assets/img/logo.png';
 
-const drawerWidth = 200;
+const drawerWidth = 240;
 const navItems = ['Home', 'About me','Skills','Project','Contact'];
 
 function DrawerAppBar(props) {
@@ -89,7 +89,6 @@ function DrawerAppBar(props) {
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-            bgcolor:'red'
           }}
         >
           {drawer}
