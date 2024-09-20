@@ -6,9 +6,7 @@ import HeroSection from './Components/HeroSection';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter 
-       basename="/ibrahimportfolio"
-       >
+      <BrowserRouter>
         <AppBar />
           <Routes>
             <Route path='/' element={<Homepage/>} />
