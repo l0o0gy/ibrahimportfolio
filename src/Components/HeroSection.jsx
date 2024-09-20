@@ -17,29 +17,29 @@ function HeroSection() {
         sx={{
           backgroundColor: '#6382ad',
           display: 'flex',
+          justifyContent:'space-evenly',
           flexDirection: { xs: 'row', md: 'row' },
           alignItems: 'center',
-          // marginBottom: '-30px',
-          marginLeft: '-40px',
+
         }}
       >
         <Box
           component="img"
           src={img}
-          sx={{ width: { xs: 250, md: 590 } }}
+          sx={{ width: { xs: 200, md: 510 } }}
           alt="personal img"
         />
         <Box sx={{ marginLeft: { xs: 0, md: 2 } }}>
           <Box
             component="img"
             src={engname}
-            sx={{ width: { xs: 170, md: 500 }, marginTop: 3 }}
+            sx={{ width: { xs: 170, md: 500 }, marginTop: 3,mb:{xs:'-10px',md:0} }}
             alt="name in English"
           />
           <Box
             sx={{
               display: 'flex',
-              justifyContent: { xs: 'space-evenly', md: 'flex-start' },
+              justifyContent: { xs: 'space-around', md:'space-evenly'},
               marginTop: 2,
             }}
           >
