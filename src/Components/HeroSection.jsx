@@ -11,15 +11,6 @@ function HeroSection() {
     window.open('https://www.instagram.com/_.ebo/', 'noopener,noreferrer');
   };
 
-  // const handleWhatsAppClick = () => {
-  //   window.open('https://api.whatsapp.com/send?phone=647733599572&text=hello', '_blank', 'noopener,noreferrer');
-  // };
-  // <a href="https://api.whatsapp.com/send?phone=647733599572&text=YOUR_MESSAGE">Chat with us on WhatsApp</a>
-  // const sendWhatsAppMessage = () => {
-  //   const link = `https://api.whatsapp.com/send?phone=+964${post.user_number}&text=I'm%20interested%20in%20your%20post%20${post.item_name}`;
-  //   window.open(link, '_blank');
-  // };
-
   return (
     <div>
       <Box style={{
@@ -29,18 +20,35 @@ function HeroSection() {
         marginBottom: '-30px',
         marginLeft: '-20px'
       }}>
-        <img src={img} style={{ width: 250 }} alt="personal img" />
+        <Box
+          component="img"
+          src={img}
+          sx={{ width: { xs: 250, md: 590 } }}
+          alt="personal img"
+        />
         <Box>
-          <img src={engname} style={{ width: 170, marginTop: 30, marginLeft: '-30px' }} alt="name in English" />
-          <Box sx={{ display: 'flex', justifyContent: 'space-evenly', marginLeft: '-40px' }}>
+          <Box
+            component="img"
+            src={engname}
+            sx={{ width: { xs: 170, md: 500 }, marginTop: 3, marginLeft: '-30px' }}
+            alt="name in English"
+          />
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: {xs:'space-evenly',md:'start'},
+              marginLeft: { xs: '-40px',md:2  },
+              // bgcolor:"red"
+            }}
+          >
             <a href="https://www.instagram.com/_.ebo/">
-            <InstagramIcon sx={{ color: 'white' }} />
+              <InstagramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: {md:2} }} />
             </a>
             <a href="https://t.me/hema_81" target="_blank" rel="noopener noreferrer">
-              <TelegramIcon sx={{ color: 'white' }} />
+              <TelegramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: {md:17} }} />
             </a>
             <a href="https://api.whatsapp.com/send?phone=9647733599572&text=Hello">
-            <WhatsAppIcon sx={{ color: 'white' }} />
+              <WhatsAppIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 } , marginLeft: {md:17}}} />
             </a>
           </Box>
         </Box>
