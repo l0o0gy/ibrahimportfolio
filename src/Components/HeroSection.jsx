@@ -33,7 +33,7 @@ function HeroSection() {
           <Box
             component="img"
             src={engname}
-            sx={{ width: { xs: 170, md: 500 }, marginTop: 3,mb:{xs:'-10px',md:0} }}
+            sx={{ width: { xs: 170, md: 500 }, marginTop: 3,mb:{xs:'-30px',md:"-40px"} }}
             alt="name in English"
           />
           <Box
