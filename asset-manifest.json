@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/ibrahimportfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/ibrahimportfolio/static/js/main.40876d67.js",
+    "main.js": "/ibrahimportfolio/static/js/main.c8fd09df.js",
     "static/js/453.ab91c354.chunk.js": "/ibrahimportfolio/static/js/453.ab91c354.chunk.js",
+    "static/media/img.png": "/ibrahimportfolio/static/media/img.61b092ae8971aa3b46e6.png",
+    "static/media/engname.png": "/ibrahimportfolio/static/media/engname.63c6d0f44d891c1e90ab.png",
     "static/media/logo.png": "/ibrahimportfolio/static/media/logo.95d1d1f15c9290610f5d.png",
     "index.html": "/ibrahimportfolio/index.html",
     "main.e6c13ad2.css.map": "/ibrahimportfolio/static/css/main.e6c13ad2.css.map",
-    "main.40876d67.js.map": "/ibrahimportfolio/static/js/main.40876d67.js.map",
+    "main.c8fd09df.js.map": "/ibrahimportfolio/static/js/main.c8fd09df.js.map",
     "453.ab91c354.chunk.js.map": "/ibrahimportfolio/static/js/453.ab91c354.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.40876d67.js"
+    "static/js/main.c8fd09df.js"
   ]
 }
