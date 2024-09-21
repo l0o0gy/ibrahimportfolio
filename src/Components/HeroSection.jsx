@@ -17,10 +17,9 @@ function HeroSection() {
         sx={{
           backgroundColor: '#6382ad',
           display: 'flex',
-          justifyContent:'space-evenly',
+          justifyContent: 'space-evenly',
           flexDirection: { xs: 'row', md: 'row' },
           alignItems: 'center',
-
         }}
       >
         <Box
@@ -33,24 +32,49 @@ function HeroSection() {
           <Box
             component="img"
             src={engname}
-            sx={{ width: { xs: 170, md: 500 }, marginTop: 3,mb:{xs:'-30px',md:"-40px"} }}
+            sx={{ width: { xs: 170, md: 500 }, marginTop: 3, mb: { xs: '-30px', md: '-40px' } }}
             alt="name in English"
           />
           <Box
             sx={{
               display: 'flex',
-              justifyContent: { xs: 'space-around', md:'space-evenly'},
+              justifyContent: { xs: 'space-around', md: 'space-evenly' },
               marginTop: 2,
             }}
           >
+            {/* Applying hover animation to Instagram, Telegram, and WhatsApp icons */}
             <a href="https://www.instagram.com/_.ebo/">
-              <InstagramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: { md: 2 } }} />
+              <InstagramIcon
+                sx={{
+                  color: 'white',
+                  fontSize: { xs: 20, md: 40 },
+                  marginLeft: { md: 2 },
+                  transition: 'transform 0.3s ease', // Smooth transition
+                  '&:hover': { transform: 'scale(1.2)' }, // Scaling on hover
+                }}
+              />
             </a>
             <a href="https://t.me/hema_81" target="_blank" rel="noopener noreferrer">
-              <TelegramIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: { md: 17 } }} />
+              <TelegramIcon
+                sx={{
+                  color: 'white',
+                  fontSize: { xs: 20, md: 40 },
+                  marginLeft: { md: 17 },
+                  transition: 'transform 0.3s ease',
+                  '&:hover': { transform: 'scale(1.2)' },
+                }}
+              />
             </a>
             <a href="https://api.whatsapp.com/send?phone=9647733599572&text=Hello">
-              <WhatsAppIcon sx={{ color: 'white', fontSize: { xs: 20, md: 40 }, marginLeft: { md: 17 } }} />
+              <WhatsAppIcon
+                sx={{
+                  color: 'white',
+                  fontSize: { xs: 20, md: 40 },
+                  marginLeft: { md: 17 },
+                  transition: 'transform 0.3s ease',
+                  '&:hover': { transform: 'scale(1.2)' },
+                }}
+              />
             </a>
           </Box>
         </Box>
