@@ -9,9 +9,8 @@ function AboutSection() {
                 sx={{
                     position: 'absolute',
                     top: {xs:'-13px',md:"-20px"},
-                    lift:0,
+                    left:{xs:40,md:70},
                     m: 0,
-                    ml:{xs:5,md:10},
                     bgcolor:'white',
                     fontSize: { xs: 20, md: 30},
                     fontWeight: 'bold',
