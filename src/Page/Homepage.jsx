@@ -3,6 +3,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import HeroSection from '../Components/HeroSection';
 import AboutSection from '../Components/AboutSection';
+import AbilitySection from '../Components/AbilitySection';
 
 function Homepage() {
 
@@ -10,6 +11,7 @@ function Homepage() {
     <div >
       <HeroSection />
       <AboutSection/>
+      <AbilitySection/>
     </div>
   );
 }
