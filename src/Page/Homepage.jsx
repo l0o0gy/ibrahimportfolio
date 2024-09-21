@@ -5,6 +5,7 @@ import HeroSection from '../Components/HeroSection';
 import AboutSection from '../Components/AboutSection';
 import AbilitySection from '../Components/AbilitySection';
 import SkillsSection from '../Components/SkillsSection';
+import ProjectSection from '../Components/ProjectSection';
 
 function Homepage() {
   const { ref: aboutRef, inView: aboutInView } = useInView({
@@ -20,6 +21,11 @@ function Homepage() {
   const { ref: skillsRef, inView: skillsInView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
+  });
+
+  const { ref: projectRef, inView:  projectInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   return (
@@ -66,6 +72,16 @@ function Homepage() {
           <SkillsSection />
         </Box>
       </Box>
+      <Box
+          ref={projectRef}
+          sx={{
+            transform: projectInView? 'translateY(0)' : 'translateY(-100px)',
+            opacity: projectInView ? 1 : 0,
+            transition: 'transform 0.8s ease, opacity 0.8s ease',
+          }}
+        >
+          <ProjectSection />
+        </Box>
     </div>
   );
 }
