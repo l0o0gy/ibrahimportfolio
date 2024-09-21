@@ -8,7 +8,7 @@ function AbilitySection() {
                 component="span"
                 sx={{
                     position: 'absolute',
-                    top: { xs: '-13px', md: "-20px" },
+                    top: {xs:'-13px',md:"-20px"},
                     left:{xs:40,md:70},
                     m: 0,
                     bgcolor: 'white',
