@@ -1,17 +1,71 @@
 import React from 'react';
-// import { useData } from '../assets/Contacts/store';
 import { Box } from '@mui/material';
+import { useInView } from 'react-intersection-observer';
 import HeroSection from '../Components/HeroSection';
 import AboutSection from '../Components/AboutSection';
 import AbilitySection from '../Components/AbilitySection';
+import SkillsSection from '../Components/SkillsSection';
 
 function Homepage() {
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const { ref: abilityRef, inView: abilityInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  const { ref: skillsRef, inView: skillsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   return (
-    <div >
+    <div>
       <HeroSection />
-      <AboutSection/>
-      <AbilitySection/>
+      
+      <Box
+        ref={aboutRef}
+        sx={{
+          transform: aboutInView ? 'translateY(0)' : 'translateY(-100px)',
+          opacity: aboutInView ? 1 : 0,
+          transition: 'transform 0.8s ease, opacity 0.8s ease',
+        }}
+      >
+        <AboutSection />
+      </Box>
+
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' },
+          gap: 2,
+        }}
+      >
+        <Box
+          ref={abilityRef}
+          sx={{
+            transform: abilityInView ? 'translateY(0)' : 'translateY(-100px)',
+            opacity: abilityInView ? 1 : 0,
+            transition: 'transform 0.8s ease, opacity 0.8s ease',
+          }}
+        >
+          <AbilitySection />
+        </Box>
+
+        <Box
+          ref={skillsRef}
+          sx={{
+            transform: skillsInView ? 'translateY(0)' : 'translateY(-100px)',
+            opacity: skillsInView ? 1 : 0,
+            transition: 'transform 0.8s ease, opacity 0.8s ease',
+          }}
+        >
+          <SkillsSection />
+        </Box>
+      </Box>
     </div>
   );
 }
