@@ -9,11 +9,9 @@ function Footer() {
     <Box
       sx={{
         color: '#7fa0c3',
-        padding: 2,
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
-        m: 1
       }}
     >
       <Box sx={{
@@ -33,7 +31,7 @@ function Footer() {
 
 
         </a>
-        <Typography sx={{mt:{xs:0 ,md:0.5}}}> _.ebo</Typography>
+        <Typography sx={{mt:{xs:0 ,md:0.5}, fontSize:{xs:15} ,mr:1}}> _.ebo</Typography>
       </Box>
       <Box sx={{
         display: 'flex',
@@ -51,7 +49,7 @@ function Footer() {
 
 
         </a>
-        <Typography sx={{mt:{xs:0 ,md:0.5}}} >@hema_81</Typography>
+        <Typography sx={{mt:{xs:0 ,md:0.5} ,fontSize:{xs:15} ,mr:1}} >@hema_81</Typography>
       </Box>
       <Box sx={{
         display: 'flex',
@@ -67,7 +65,7 @@ function Footer() {
             }}
           />
         </a>
-        <Typography sx={{mt:{xs:0 ,md:0.5}}}>+964 773 359 9572</Typography>
+        <Typography sx={{mt:{xs:0 ,md:0.5}, fontSize:{xs:15} ,mr:1}}>+964 773 359 9572</Typography>
       </Box>
     </Box>
   );
