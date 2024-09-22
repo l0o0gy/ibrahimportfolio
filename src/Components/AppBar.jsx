@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import logo from '../assets/img/logo.png';
+import logo2 from '../assets/img/LOGO HEMA NEW-49.png'
 import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -42,7 +43,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src={logo} style={{ width: 150 }} alt="logo" />
+        <img src={logo2} style={{ width: 150 }} alt="logo" />
       </Typography>
       <Divider />
       <List>
