@@ -8,13 +8,13 @@ function AboutSection() {
                 component="span"
                 sx={{
                     position: 'absolute',
-                    top: {xs:'-13px',md:"-20px"},
-                    left:{xs:40,md:70},
+                    top: { xs: '-13px', md: "-20px" },
+                    left: { xs: 40, md: 70 },
                     m: 0,
-                    bgcolor:'white',
-                    fontSize: { xs: 20, md: 30},
+                    bgcolor: 'white',
+                    fontSize: { xs: 20, md: 30 },
                     fontWeight: 'bold',
-                    color:'#6382ad',
+                    color: '#6382ad',
                 }}
             >
                 About Me
@@ -28,10 +28,13 @@ function AboutSection() {
                     fontSize: { xs: 10, md: 15 }
                 }}
             >
-                <h1>Lorem Ipsum is a type of placeholder text used in the graphic, print, and publishing industries.
-                    It serves to preview layouts and visual mockups without relying on meaningful content.
-                    Its origins trace back to the classical Latin literature, and it has become a standard for
-                    demonstrating the visual form of a document or typeface.
+                <h1>I`m Ibrahim Bilal Mohammed Alkhushally Alqaysi ,
+                    21 years old from baghdad,iraq. A Student from
+                    U.O.T bio mechanical department Eng. I have
+                    experience in printer and orginaizer in left sphere
+                    co.  interested in design and printing to develop
+                    my skills i believe that designer can make life
+                    easier and show world that iraqi man can design
                 </h1>
             </Box>
         </div>
