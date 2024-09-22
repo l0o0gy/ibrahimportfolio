@@ -7,9 +7,6 @@ import img from '../assets/img/img.png';
 import engname from '../assets/img/engname.png';
 
 function HeroSection() {
-  const handleInstagramClick = () => {
-    window.open('https://www.instagram.com/_.ebo/', 'noopener,noreferrer');
-  };
 
   return (
     <div>
@@ -42,15 +39,14 @@ function HeroSection() {
               marginTop: 2,
             }}
           >
-            {/* Applying hover animation to Instagram, Telegram, and WhatsApp icons */}
             <a href="https://www.instagram.com/_.ebo/">
               <InstagramIcon
                 sx={{
                   color: 'white',
                   fontSize: { xs: 20, md: 40 },
                   marginLeft: { md: 2 },
-                  transition: 'transform 0.3s ease', // Smooth transition
-                  '&:hover': { transform: 'scale(1.2)' }, // Scaling on hover
+                  transition: 'transform 0.3s ease', 
+                  '&:hover': { transform: 'scale(1.2)' }, 
                 }}
               />
             </a>
