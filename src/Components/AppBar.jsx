@@ -15,16 +15,28 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import logo from '../assets/img/logo.png';
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About me','Skills','Project','Contact'];
+const navItems = [
+  { label: 'Home', path: '/' },
+  { label: 'About me', path: '/about' },
+  { label: 'Skills', path: '/skills' },
+  { label: 'Project', path: '/projects' },
+  { label: 'Contact', path: '/contact' },
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
+  const navigate = useNavigate(); 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const goToPage = (path) => {
+    navigate(path); 
   };
 
   const drawer = (
@@ -35,9 +47,12 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton
+              sx={{ textAlign: 'center' }}
+              onClick={() => goToPage(item.path)} 
+            >
+              <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -48,9 +63,9 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex',height:50}}>
+    <Box sx={{ display: 'flex', height: 50 }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ bgcolor: '#6382ad'}}>
+      <AppBar component="nav" sx={{ bgcolor: '#6382ad' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -64,14 +79,18 @@ function DrawerAppBar(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, mt: 1}} 
+            sx={{ flexGrow: 1, mt: 1 }}
           >
             <img src={logo} style={{ width: 90 }} alt="logo" />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+              <Button
+                key={item.label}
+                sx={{ color: '#fff' }}
+                onClick={() => goToPage(item.path)} 
+              >
+                {item.label}
               </Button>
             ))}
           </Box>
@@ -84,7 +103,7 @@ function DrawerAppBar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true,
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
