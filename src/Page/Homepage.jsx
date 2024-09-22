@@ -36,7 +36,7 @@ function Homepage() {
   });
 
   return (
-    <div>
+    <div style={{ fontFamily: 'Somar Medium Bold' }}>
       <HeroSection />
 
       <Box
@@ -99,7 +99,7 @@ function Homepage() {
       >
         <ContactSection />
       </Box>
-      <Footer />
+      <Footer style={{ fontFamily: 'Somar Medium Bold' }}/>
     </div>
   );
 }

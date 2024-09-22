@@ -30,9 +30,18 @@ function ContactSection() {
                     gridTemplateColumns: { xs: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' },
                 }}
             >
-                <Typography variant="h6" gutterBottom sx={{ m: { xs: 0, md: 10 } }}>
+                <Typography
+                    variant="h6"
+                    gutterBottom
+                    sx={{
+                        m: { xs: 0, md: 10 },
+                        color: '#7fa0c3',
+                        textAlign: 'center',
+                    }}
+                >
                     If you have any feedback you would like to share, I would be happy to hear it. Also, if you need a designer, I'm here to help. You can contact me anytime.
                 </Typography>
+
 
                 <Box sx={{ maxWidth: "100%" }}>
                     <Box sx={{ mb: 2 }}>
@@ -91,7 +100,7 @@ function ContactSection() {
                 alt="pattern"
                 sx={{
                     width: '100%',
-                    height: {xs:50,md:150},
+                    height: { xs: 50, md: 150 },
 
                 }}
             />
