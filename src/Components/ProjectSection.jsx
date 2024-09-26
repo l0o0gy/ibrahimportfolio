@@ -107,7 +107,7 @@ function ProjectSection() {
                                     transform: 'scale(1.1)',
                                 },
                             }}
-                            onClick={() => handleCardClick(project.id)} // Pass the project ID
+                            onClick={() => handleCardClick(project.id)}
                         />
                     ))}
                 </Box>
