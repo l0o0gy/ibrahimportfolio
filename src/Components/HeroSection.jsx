@@ -17,26 +17,30 @@ function HeroSection() {
           justifyContent: 'space-evenly',
           flexDirection: { xs: 'row', md: 'row' },
           alignItems: 'center',
+          height: { md: '95vh' }
         }}
       >
         <Box
           component="img"
           src={img}
-          sx={{ width: { xs: 200, md: 510 } }}
+          sx={{ width: { xs: 215, md: 510 }, overflow: 'hidden' }}
           alt="personal img"
+          loading="lazy"
         />
         <Box sx={{ marginLeft: { xs: 0, md: 2 } }}>
           <Box
             component="img"
             src={engname}
-            sx={{ width: { xs: 170, md: 500 }, marginTop: 3, mb: { xs: '-30px', md: '-40px' } }}
+            sx={{ width: { xs: 170, md: 500 }, marginTop: 3, mb: { xs: '-30px', md: '-40px' }, mr: 3 }}
             alt="name in English"
+            loading="lazy"
           />
           <Box
             sx={{
               display: 'flex',
               justifyContent: { xs: 'space-around', md: 'space-evenly' },
               marginTop: 2,
+              mr: 3
             }}
           >
             <a href="https://www.instagram.com/_.ebo/">
@@ -45,8 +49,8 @@ function HeroSection() {
                   color: 'white',
                   fontSize: { xs: 20, md: 40 },
                   marginLeft: { md: 2 },
-                  transition: 'transform 0.3s ease', 
-                  '&:hover': { transform: 'scale(1.2)' }, 
+                  transition: 'transform 0.3s ease',
+                  '&:hover': { transform: 'scale(1.2)' },
                 }}
               />
             </a>
