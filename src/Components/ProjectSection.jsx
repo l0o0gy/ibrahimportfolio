@@ -7,7 +7,7 @@ import img3 from '../assets/img/menuproject.png';
 import img4 from '../assets/img/coverproject.png';
 import img5 from '../assets/img/soicalmediaproject.png';
 import img6 from '../assets/img/3ditemproject.png';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const projects = [
     { src: img1, alt: 'Logo Project', id: 1 },
@@ -23,6 +23,32 @@ function ProjectSection() {
         triggerOnce: true,
         threshold: 0.1,
     });
+    const navigate = useNavigate();
+
+    const handleCardClick = (projectId) => {
+        switch (projectId) {
+            case 1:
+                navigate("/logo");
+                break;
+            case 2:
+                navigate("/flyer");
+                break;
+            case 3:
+                navigate("/menu");
+                break;
+            case 4:
+                navigate("/cover");
+                break;
+            case 5:
+                navigate("/socialMedia");
+                break;
+            case 6:
+                navigate("/threedItem");
+                break;
+            default:
+                break;
+        }
+    };
 
     return (
         <div>
@@ -67,22 +93,22 @@ function ProjectSection() {
                     }}
                 >
                     {projects.map((project) => (
-                        <Link to={`/project/${project.id}`} key={project.id} style={{ textDecoration: 'none' }}>
-                            <Box
-                                component="img"
-                                src={project.src}
-                                alt={project.alt}
-                                sx={{
-                                    width: { xs: 150, md: 250 },
-                                    height: 'auto',
-                                    mt: { xs: 0, md: '-50px' },
-                                    transition: 'transform 0.3s ease',
-                                    '&:hover': {
-                                        transform: 'scale(1.1)', 
-                                    },
-                                }}
-                            />
-                        </Link>
+                        <Box
+                            component="img"
+                            src={project.src}
+                            alt={project.alt}
+                            key={project.id}
+                            sx={{
+                                width: { xs: 150, md: 250 },
+                                height: 'auto',
+                                mt: { xs: 0, md: '-50px' },
+                                transition: 'transform 0.3s ease',
+                                '&:hover': {
+                                    transform: 'scale(1.1)',
+                                },
+                            }}
+                            onClick={() => handleCardClick(project.id)} // Pass the project ID
+                        />
                     ))}
                 </Box>
             </Box>
