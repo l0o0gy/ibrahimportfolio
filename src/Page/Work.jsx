@@ -1,30 +1,28 @@
-import React from 'react'
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-
-
 function Work() {
-    const location = useLocation();
+  const location = useLocation();
+  const project = location.state?.data || {}; // استرجاع البيانات المرسلة
 
   return (
     <div>
-        <h1>Ibrahim work</h1>
-       {/* <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
+      <h1>{project.title || "Project Work"}</h1> {/* عرض عنوان المشروع أو افتراضي */}
+      <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+        <ImageListItem key={project.id}>
           <img
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            alt={item.title}
+            src={project.image} // استخدم مصدر الصورة للمشروع
+            alt={project.title}
             loading="lazy"
+            style={{ width: '100%', height: 'auto' }} // تأكد من أنها متجاوبة
           />
+          <div>{project.title}</div> {/* عرض عنوان المشروع */}
         </ImageListItem>
-      ))}
-    </ImageList> */}
+      </ImageList>
     </div>
-  )
+  );
 }
 
-export default Work
+export default Work;
